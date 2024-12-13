@@ -1,0 +1,272 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #111111;
+  padding: 2rem;
+  padding-top: 3rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.header > div {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcomeContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.welcomeText {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.nameText {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.dateText {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.content {
+  position: relative;
+  margin-top: -2rem;
+  padding: 0 1.5rem;
+  z-index: 1;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statsCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  width: calc(50% - 0.5rem);
+  max-width: 400px;
+}
+
+.statsCard:hover {
+  transform: translateY(-2px);
+}
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.workCard .dot {
+  background-color: #22C55E;
+}
+
+.balanceCard .dot {
+  background-color: #3B82F6;
+}
+
+.statsLabel {
+  font-size: 0.875rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.statsValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.statsSubtext {
+  font-size: 0.75rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.insightCard {
+  background: #F8FAFC;
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 2rem;
+}
+
+.insightText {
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 1.25rem;
+}
+
+.timeCard {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dateRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.extraHours {
+  color: #22C55E;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.timelineRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  color: #666666;
+  margin-bottom: 0.25rem;
+}
+
+.timeValue {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111111;
+}
+
+.separator {
+  color: #E5E7EB;
+  font-weight: 300;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.totalLabel {
+  font-size: 0.875rem;
+  color: #666666;
+}
+
+.totalValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+  }
+  
+  .header > div {
+    padding: 0 1rem;
+  }
+
+  .header::after {
+    bottom: -1.5rem;
+    height: 3rem;
+  }
+
+  .content {
+    padding: 0 1rem;
+    margin-top: -1.5rem;
+  }
+
+  .statsContainer {
+    gap: 1rem;
+  }
+
+  .timelineRow {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .timeBlock {
+    flex: 1;
+    min-width: 40%;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .dateText {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsContainer {
+    flex-direction: column;
+  }
+
+  .statsCard {
+    width: 100%;
+    max-width: none;
+  }
+
+  .timeBlock {
+    min-width: 100%;
+  }
+
+  .statsValue {
+    font-size: 1.75rem;
+  }
+}

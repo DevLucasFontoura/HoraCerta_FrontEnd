@@ -5,6 +5,7 @@ import Precos from '../pages/Precos/precos';
 import Recursos from '../pages/Recursos/recursos';
 import Login from '../pages/Login/login';
 import Registro from '../pages/Registro/registro';
+import RegistroPonto from '../pages/RegistroPonto/registroPonto';
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
   {
     path: '/registro',
     element: <Registro />,
+  },
+  {
+    path: '/registroPonto',
+    element: <RegistroPonto />,
   },
   // Adicione outras rotas aqui
 ]);

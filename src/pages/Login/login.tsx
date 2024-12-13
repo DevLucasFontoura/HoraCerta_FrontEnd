@@ -15,7 +15,7 @@ const Login = () => {
     setLoading(true);
     
     setTimeout(() => {
-      navigate('/home');
+      navigate('/registroPonto');
     }, 500);
   };
 
@@ -46,11 +46,10 @@ const Login = () => {
             <label className={styles.label}>Email</label>
             <input
               className={styles.input}
-              type="email"
+              type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="seu@email.com"
-              required
             />
           </div>
 
@@ -62,7 +61,6 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              required
             />
           </div>
 
