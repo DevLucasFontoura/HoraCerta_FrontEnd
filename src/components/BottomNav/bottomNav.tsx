@@ -11,7 +11,7 @@ const BottomNav = () => {
     <>
       {/* Versão Mobile */}
       <nav className={styles.mobileNav}>
-        <Link to="/home" className={location.pathname === '/home' ? styles.active : ''}>
+        <Link to="/registroPonto" className={location.pathname === '/registroPonto' ? styles.active : ''}>
           <AiOutlineHome size={24} />
           <span>Home</span>
         </Link>
@@ -35,7 +35,7 @@ const BottomNav = () => {
       {/* Versão Desktop */}
       <nav className={styles.desktopNav}>
         <div className={styles.navContent}>
-          <Link to="/home" className={location.pathname === '/home' ? styles.active : ''}>
+          <Link to="/registroPonto" className={location.pathname === '/registroPonto' ? styles.active : ''}>
             <AiOutlineHome size={24} />
             <span>Home</span>
           </Link>

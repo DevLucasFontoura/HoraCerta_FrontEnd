@@ -6,6 +6,7 @@ import Recursos from '../pages/Recursos/recursos';
 import Login from '../pages/Login/login';
 import Registro from '../pages/Registro/registro';
 import RegistroPonto from '../pages/RegistroPonto/registroPonto';
+import Dashboard from '../pages/Dashboard/dashboard';
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
   {
     path: '/registroPonto',
     element: <RegistroPonto />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
   },
   // Adicione outras rotas aqui
 ]);
