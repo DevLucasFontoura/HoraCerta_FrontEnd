@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import LineChart from '../../components/LineChart/LineChart';
 import BarChart from '../../components/BarChart/BarChart';
 import BottomNav from '../../components/BottomNav/bottomNav';
+import HabitTracker from '../../components/HabitTracker/HabitTracker';
 import styles from './dashboard.module.css';
 
 const Dashboard = () => {
@@ -11,6 +12,8 @@ const Dashboard = () => {
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
+
+  const extraHoursData = Array.from({ length: 35 }).map(() => Math.random() > 0.5);
 
   return (
     <div className={styles.container}>
@@ -78,10 +81,9 @@ const Dashboard = () => {
               >
                 <h2 className={styles.sectionTitle}>Horas Extras</h2>
                 <div className={styles.chartContainer}>
-                  <LineChart 
-                    data={[2, 1.5, 0, 1, 2]}
-                    labels={['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta']}
-                    title="Horas Extras"
+                  <HabitTracker 
+                    data={extraHoursData}
+                    title="Dias com horas extras registradas"
                   />
                 </div>
               </motion.section>
