@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import LineChart from '../../components/LineChart/LineChart';
-import BarChart from '../../components/BarChart/BarChart';
-import BottomNav from '../../components/BottomNav/bottomNav';
 import HabitTracker from '../../components/HabitTracker/HabitTracker';
+import BarChart from '../../components/Graficos/graficoDeBarras';
+import LineChart from '../../components/Graficos/graficoDeLinha';
+import BottomNav from '../../components/Menu/menu';
+import { useState, useEffect } from 'react';
 import styles from './dashboard.module.css';
+import { motion } from 'framer-motion';
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -79,11 +79,11 @@ const Dashboard = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <h2 className={styles.sectionTitle}>Horas Extras</h2>
+                <h2 className={styles.sectionTitle}>Pontos Registrados</h2>
                 <div className={styles.chartContainer}>
                   <HabitTracker 
                     data={extraHoursData}
-                    title="Dias com horas extras registradas"
+                    title="Pontos Registrados"
                   />
                 </div>
               </motion.section>

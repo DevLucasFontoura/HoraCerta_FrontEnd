@@ -7,7 +7,8 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 } from 'chart.js';
 
 ChartJS.register(
@@ -17,7 +18,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
 
 interface LineChartProps {
@@ -32,14 +34,11 @@ const LineChart = ({ data, labels, title }: LineChartProps) => {
     datasets: [{
       label: title,
       data,
-      borderColor: '#64748B',
-      backgroundColor: 'rgba(100, 116, 139, 0.1)',
+      borderColor: '#475569',
+      backgroundColor: 'rgba(71, 85, 105, 0.15)',
       tension: 0.4,
-      fill: {
-        target: 'origin',
-        above: 'rgba(100, 116, 139, 0.1)'
-      },
-      pointBackgroundColor: '#64748B',
+      fill: true,
+      pointBackgroundColor: '#475569',
       pointBorderColor: '#ffffff',
       pointBorderWidth: 2,
       pointRadius: 4,

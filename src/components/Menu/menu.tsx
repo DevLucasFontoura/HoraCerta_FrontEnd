@@ -1,8 +1,8 @@
-import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineHome, AiOutlineDashboard, AiOutlineSetting } from 'react-icons/ai';
 import { IoStatsChartOutline } from 'react-icons/io5';
+import { Link, useLocation } from 'react-router-dom';
 import { FiPlusCircle } from 'react-icons/fi';
-import styles from './bottomNav.module.css';
+import styles from './menu.module.css';
 
 const BottomNav = () => {
   const location = useLocation();

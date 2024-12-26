@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import BottomNav from '../../components/BottomNav/bottomNav';
+import BottomNav from '../../components/Menu/menu';
 import styles from './registroPonto.module.css';
 
 const RegistroDePonto = () => {
