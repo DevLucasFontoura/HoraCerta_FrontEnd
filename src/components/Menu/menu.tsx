@@ -11,7 +11,7 @@ const BottomNav = () => {
     <>
       {/* Versão Mobile */}
       <nav className={styles.mobileNav}>
-        <Link to="/registroPonto" className={location.pathname === '/registroPonto' ? styles.active : ''}>
+        <Link to="/bemVindo" className={location.pathname === '/bemVindo' ? styles.active : ''}>
           <AiOutlineHome size={24} />
           <span>Home</span>
         </Link>
@@ -19,14 +19,14 @@ const BottomNav = () => {
           <AiOutlineDashboard size={24} />
           <span>Dashboard</span>
         </Link>
-        <button className={styles.addButton}>
+        <button className={`${styles.addButton} ${location.pathname === '/' ? styles.active : ''}`}>
           <FiPlusCircle size={32} />
         </button>
         <Link to="/relatorios" className={location.pathname === '/relatorios' ? styles.active : ''}>
           <IoStatsChartOutline size={24} />
           <span>Relatórios</span>
         </Link>
-        <Link to="/ajustes" className={location.pathname === '/ajustes' ? styles.active : ''}>
+        <Link to="/configuracao" className={location.pathname === '/configuracao' ? styles.active : ''}>
           <AiOutlineSetting size={24} />
           <span>Ajustes</span>
         </Link>
@@ -50,7 +50,7 @@ const BottomNav = () => {
             <IoStatsChartOutline size={24} />
             <span>Relatórios</span>
           </Link>
-          <Link to="/ajustes" className={location.pathname === '/ajustes' ? styles.active : ''}>
+          <Link to="/configuracao" className={location.pathname === '/configuracao' ? styles.active : ''}>
             <AiOutlineSetting size={24} />
             <span>Ajustes</span>
           </Link>
