@@ -1,44 +1,44 @@
 import { FaUser, FaBell, FaClock, FaCalendar, FaBook, FaQuestionCircle, FaHeadset, FaLock, FaInfoCircle, FaCog } from 'react-icons/fa';
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect } from 'react';
 import BottomNav from '../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './configuracao.module.css';
 import { motion } from 'framer-motion';
 
 // Mock user settings type
-interface UserSettings {
-  notifications: boolean;
-  emailReports: boolean;
-  workSchedule: {
-    workTime: number;
-    lunchTime: number;
-  };
-}
+// interface UserSettings {
+//   notifications: boolean;
+//   emailReports: boolean;
+//   workSchedule: {
+//     workTime: number;
+//     lunchTime: number;
+//   };
+// }
 
 export default function SettingsScreen() {
   const navigate = useNavigate();
-  const [userSettings, setUserSettings] = useState<UserSettings>({
-    notifications: false,
-    emailReports: false,
-    workSchedule: {
-      workTime: 8,
-      lunchTime: 1
-    }
-  });
+//   const [userSettings, setUserSettings] = useState<UserSettings>({
+//     notifications: false,
+//     emailReports: false,
+//     workSchedule: {
+//       workTime: 8,
+//       lunchTime: 1
+//     }
+//   });
 
   // Mock user data loading
-  useEffect(() => {
-    // Simulate loading user settings from an API
-    const mockUserSettings = {
-      notifications: true,
-      emailReports: true,
-      workSchedule: {
-        workTime: 8,
-        lunchTime: 1
-      }
-    };
-    setUserSettings(mockUserSettings);
-  }, []);
+//   useEffect(() => {
+//     // Simulate loading user settings from an API
+//     const mockUserSettings = {
+//       notifications: true,
+//       emailReports: true,
+//       workSchedule: {
+//         workTime: 8,
+//         lunchTime: 1
+//       }
+//     };
+//     // setUserSettings(mockUserSettings);
+//   }, []);
 
   const settingsOptions = {
     profile: [

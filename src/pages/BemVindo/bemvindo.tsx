@@ -1,14 +1,14 @@
 import BottomNav from '../../components/Menu/menu';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import styles from './bemvindo.module.css';
 import { motion } from 'framer-motion';
 
 const RegistroDePonto = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+    // useEffect(() => {
+    //   setTimeout(() => setLoading(false), 1000);
+    // }, []);
 
   const formatDate = () => {
     return new Date().toLocaleDateString('pt-BR', { 
