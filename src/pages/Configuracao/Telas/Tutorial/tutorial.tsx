@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
 import { FaArrowLeft, FaClock, FaChartBar, FaEdit, FaTachometerAlt } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './tutorial.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import { motion } from 'framer-motion';
 
 const tutorialSteps = [
   {

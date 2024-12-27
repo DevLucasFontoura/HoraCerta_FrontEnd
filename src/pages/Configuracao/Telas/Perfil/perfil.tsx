@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
 import { FaUser, FaEnvelope, FaArrowLeft } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './perfil.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function ProfileScreen() {

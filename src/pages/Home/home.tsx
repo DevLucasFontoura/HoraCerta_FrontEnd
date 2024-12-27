@@ -1,18 +1,9 @@
+import { AiOutlineClockCircle, AiOutlineEdit, AiOutlineFileText, AiOutlineMobile, AiOutlineSafety, AiOutlineTeam, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import AnimatedClock from '../../components/AnimatedClock/AnimatedClock';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  AiOutlineClockCircle, 
-  AiOutlineEdit, 
-  AiOutlineFileText, 
-  AiOutlineMobile, 
-  AiOutlineSafety, 
-  AiOutlineTeam, 
-  AiOutlineMenu, 
-  AiOutlineClose 
-} from 'react-icons/ai';
-import AnimatedClock from '../../components/AnimatedClock/AnimatedClock';
-import { useState } from 'react';
 import styles from './home.module.css';
+import { useState } from 'react';
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

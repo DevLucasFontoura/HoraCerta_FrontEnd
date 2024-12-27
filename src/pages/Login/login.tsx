@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { AiOutlineClockCircle, AiOutlineArrowLeft } from 'react-icons/ai';
+import { useNavigate, Link } from 'react-router-dom';
 import styles from './login.module.css';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Login = () => {
   const [email, setEmail] = useState('');

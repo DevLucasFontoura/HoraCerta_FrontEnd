@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { FaArrowLeft, FaClock, FaEnvelope, FaQuestionCircle } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './suporte.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 interface SupportItem {
   title: string;

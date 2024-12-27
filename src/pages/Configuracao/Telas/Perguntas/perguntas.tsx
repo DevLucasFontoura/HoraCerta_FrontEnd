@@ -1,9 +1,9 @@
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaChevronDown } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import styles from './perguntas.module.css';
-import BottomNav from '../../../../components/Menu/menu';
 import { useState } from 'react';
 
 interface FAQItem {

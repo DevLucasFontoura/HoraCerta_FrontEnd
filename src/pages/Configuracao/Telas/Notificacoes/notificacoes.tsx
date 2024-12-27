@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
+import BottomNav from '../../../../components/Menu/menu';
 import { FaBell, FaArrowLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styles from './notificacoes.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function NotificationsScreen() {

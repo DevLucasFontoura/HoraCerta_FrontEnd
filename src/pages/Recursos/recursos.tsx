@@ -1,20 +1,8 @@
+import { AiOutlineClockCircle, AiOutlineEdit, AiOutlineFileText, AiOutlineMobile, AiOutlineSafety, AiOutlineTeam, AiOutlineBarChart, AiOutlineCloud, AiOutlineNotification, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  AiOutlineClockCircle, 
-  AiOutlineEdit, 
-  AiOutlineFileText, 
-  AiOutlineMobile, 
-  AiOutlineSafety, 
-  AiOutlineTeam,
-  AiOutlineBarChart,
-  AiOutlineCloud,
-  AiOutlineNotification,
-  AiOutlineMenu,
-  AiOutlineClose
-} from 'react-icons/ai';
 import styles from './recursos.module.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const FeaturesPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

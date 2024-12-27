@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import BottomNav from '../../components/Menu/menu';
+import { useState, useEffect } from 'react';
 import styles from './bemvindo.module.css';
+import { motion } from 'framer-motion';
 
 const RegistroDePonto = () => {
   const [loading, setLoading] = useState(true);

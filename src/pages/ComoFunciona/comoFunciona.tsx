@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { AiOutlineClockCircle, AiOutlineCheckCircle, AiOutlineFileText, AiOutlineBarChart, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './comoFunciona.module.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const ComoFunciona = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

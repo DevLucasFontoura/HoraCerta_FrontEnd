@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import styles from './AnimatedClock.module.css';
+import { motion } from 'framer-motion';
 
 interface AnimatedClockProps {
   width?: number;

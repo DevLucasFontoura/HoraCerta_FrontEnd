@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
 import styles from './HabitTracker.module.css';
+import { motion } from 'framer-motion';
 
 interface HabitTrackerProps {
   data: boolean[];
   title: string;
 }
 
-const HabitTracker = ({ data, title }: HabitTrackerProps) => {
+const HabitTracker = ({ data }: HabitTrackerProps) => {
   const totalDays = 31;
   const daysPerRow = 10;
   const totalRows = Math.ceil(totalDays / daysPerRow);

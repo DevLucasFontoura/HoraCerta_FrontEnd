@@ -1,24 +1,24 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/Home/home';
-import ComoFunciona from '../pages/ComoFunciona/comoFunciona';
-import Precos from '../pages/Precos/precos';
-import Recursos from '../pages/Recursos/recursos';
-import Login from '../pages/Login/login';
-import Registro from '../pages/Registro/registro';
-import BemVindo from '../pages/BemVindo/bemvindo';
-import Dashboard from '../pages/Dashboard/dashboard';
-import Configuracao from '../pages/Configuracao/configuracao';
-import Perfil from '../pages/Configuracao/Telas/Perfil/perfil';
 import Notificacoes from '../pages/Configuracao/Telas/Notificacoes/notificacoes';
-import Jornada from '../pages/Configuracao/Telas/Jornada/jornada';
-import Feriados from '../pages/Configuracao/Telas/Feriados/feriados';
-import Tutorial from '../pages/Configuracao/Telas/Tutorial/tutorial';
 import Perguntas from '../pages/Configuracao/Telas/Perguntas/perguntas';
 import Politica from '../pages/Configuracao/Telas/Politica/politica';
-import Sobre from '../pages/Configuracao/Telas/Sobre/sobre';
-import Suporte from '../pages/Configuracao/Telas/Suporte/suporte';
+import Feriados from '../pages/Configuracao/Telas/Feriados/feriados';
+import Tutorial from '../pages/Configuracao/Telas/Tutorial/tutorial';
 import RegistrarPonto from '../pages/RegistrarPonto/registrarPonto';
+import Jornada from '../pages/Configuracao/Telas/Jornada/jornada';
+import Suporte from '../pages/Configuracao/Telas/Suporte/suporte';
+import Perfil from '../pages/Configuracao/Telas/Perfil/perfil';
+import Configuracao from '../pages/Configuracao/configuracao';
+import ComoFunciona from '../pages/ComoFunciona/comoFunciona';
+import Sobre from '../pages/Configuracao/Telas/Sobre/sobre';
 import Relatorios from '../pages/Relatorios/relatorios';
+import { createBrowserRouter } from 'react-router-dom';
+import Dashboard from '../pages/Dashboard/dashboard';
+import Recursos from '../pages/Recursos/recursos';
+import Registro from '../pages/Registro/registro';
+import BemVindo from '../pages/BemVindo/bemvindo';
+import Precos from '../pages/Precos/precos';
+import Login from '../pages/Login/login';
+import Home from '../pages/Home/home';
 
 export const router = createBrowserRouter([
   {

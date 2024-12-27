@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { FaArrowLeft, FaDatabase, FaChartArea, FaShieldAlt, FaUsers, FaCloud, FaUser } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './politica.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface PolicySection {
   title: string;

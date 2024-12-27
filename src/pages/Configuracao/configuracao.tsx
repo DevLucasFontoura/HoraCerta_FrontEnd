@@ -1,10 +1,9 @@
+import { FaUser, FaBell, FaClock, FaCalendar, FaBook, FaQuestionCircle, FaHeadset, FaLock, FaInfoCircle, FaCog } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react';
+import BottomNav from '../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
-import { FaUser, FaBell, FaClock, FaCalendar, FaBook, FaQuestionCircle, 
-         FaHeadset, FaLock, FaInfoCircle, FaCog } from 'react-icons/fa';
 import styles from './configuracao.module.css';
 import { motion } from 'framer-motion';
-import BottomNav from '../../components/Menu/menu';
 
 // Mock user settings type
 interface UserSettings {

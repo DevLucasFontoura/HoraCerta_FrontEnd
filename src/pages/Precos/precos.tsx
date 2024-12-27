@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { AiOutlineCheckCircle, AiOutlineClockCircle, AiOutlineInfoCircle } from 'react-icons/ai';
 import styles from './precos.module.css';
+import { Link } from 'react-router-dom';
 
 const Precos = () => {
   return (

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FiClock, FiCalendar, FiFileText } from 'react-icons/fi';
 import { IoStatsChartOutline } from 'react-icons/io5'
-import styles from './relatorios.module.css';
 import BottomNav from '../../components/Menu/menu';
+import styles from './relatorios.module.css';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface TimeRecord {
   id: string;

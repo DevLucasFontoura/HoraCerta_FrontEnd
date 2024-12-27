@@ -1,6 +1,6 @@
 import { AiOutlineHome, AiOutlineDashboard, AiOutlineSetting } from 'react-icons/ai';
-import { IoStatsChartOutline } from 'react-icons/io5';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { IoStatsChartOutline } from 'react-icons/io5';
 import { FiPlusCircle } from 'react-icons/fi';
 import styles from './menu.module.css';
 

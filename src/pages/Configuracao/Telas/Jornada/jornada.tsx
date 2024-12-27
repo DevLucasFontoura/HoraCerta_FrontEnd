@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import BottomNav from '../../../../components/Menu/menu';
 import { FaClock, FaArrowLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styles from './jornada.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function WorkScheduleScreen() {
   const navigate = useNavigate();

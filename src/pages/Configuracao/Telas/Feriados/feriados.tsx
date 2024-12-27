@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FaCalendar, FaArrowLeft, FaPlus, FaTrash, FaQuestionCircle, FaTimes } from 'react-icons/fa';
+import BottomNav from '../../../../components/Menu/menu';
 import { useNavigate } from 'react-router-dom';
 import styles from './feriados.module.css';
-import BottomNav from '../../../../components/Menu/menu';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface Holiday {
   date: Date;
