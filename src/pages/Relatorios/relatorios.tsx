@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiEdit2, FiClock, FiCalendar } from 'react-icons/fi';
+import { FiEdit2, FiClock, FiCalendar, FiFileText } from 'react-icons/fi';
 import { IoStatsChartOutline } from 'react-icons/io5';
 import { BsArrowRightShort } from 'react-icons/bs';
 import styles from './relatorios.module.css';
@@ -155,6 +155,25 @@ const mockTimeRecords: TimeRecord[] = [
 export default function ReportsScreen() {
   return (
     <div className={styles.containerWrapper}>
+      <header className={styles.header}>
+        <div>
+          <motion.h1 
+            className={styles.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            Relatórios
+          </motion.h1>
+          <motion.p 
+            className={styles.subtitle}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.8 }}
+          >
+            Acompanhe seus registros de ponto
+          </motion.p>
+        </div>
+      </header>
+
       <motion.div 
         className={styles.container}
         initial={{ opacity: 0 }}
@@ -178,8 +197,8 @@ export default function ReportsScreen() {
           />
           <StatsCard 
             label="Relatório Completo" 
-            value="Ver mais >" 
-            icon={<BsArrowRightShort size={24} />}
+            value="Em breve" 
+            icon={<FiFileText size={24} />}
           />
         </div>
 
