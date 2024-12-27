@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiEdit2, FiClock, FiCalendar, FiFileText } from 'react-icons/fi';
-import { IoStatsChartOutline } from 'react-icons/io5';
-import { BsArrowRightShort } from 'react-icons/bs';
+import { FiClock, FiCalendar, FiFileText } from 'react-icons/fi';
+import { IoStatsChartOutline } from 'react-icons/io5'
 import styles from './relatorios.module.css';
 import BottomNav from '../../components/Menu/menu';
 

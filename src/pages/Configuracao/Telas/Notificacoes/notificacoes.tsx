@@ -8,7 +8,7 @@ import { useState } from 'react';
 export default function NotificationsScreen() {
   const navigate = useNavigate();
   const [pointReminder, setPointReminder] = useState(false);
-  const [emailNotifications, setEmailNotifications] = useState(false);
+  const [emailNotifications] = useState(false);
 
   const handlePointReminderToggle = (value: boolean) => {
     setPointReminder(value);
