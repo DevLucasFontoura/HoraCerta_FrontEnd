@@ -1,6 +1,7 @@
 .container {
   min-height: 100vh;
   background-color: #ffffff;
+  padding-bottom: 80px;
 }
 
 .header {
@@ -48,6 +49,7 @@
   position: relative;
   margin-top: -2rem;
   padding: 0 1.5rem;
+  padding-bottom: 80px;
   z-index: 1;
   max-width: 1024px;
   margin-left: auto;
@@ -159,11 +161,10 @@
 }
 
 .timelineRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
 }
 
 .timeBlock {
@@ -171,23 +172,23 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 1rem 0;
 }
 
 .timeLabel {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #666666;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeValue {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #111111;
 }
 
 .separator {
-  color: #E5E7EB;
-  font-weight: 300;
+  display: none;
 }
 
 .totalRow {
@@ -263,10 +264,43 @@
   }
 
   .timeBlock {
-    min-width: 100%;
+    min-width: auto;
+    flex: 0 0 auto;
+    padding: 0 0.5rem;
+  }
+
+  .separator {
+    display: block;
   }
 
   .statsValue {
     font-size: 1.75rem;
+  }
+
+  .timelineRow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .container {
+    padding-bottom: 100px;
+  }
+
+  .content {
+    padding-bottom: 100px;
+  }
+
+  .timelineRow {
+    gap: 0.75rem;
+  }
+  
+  .timeBlock {
+    padding: 0.75rem 0;
+  }
+  
+  .timeValue {
+    font-size: 1.125rem;
   }
 }

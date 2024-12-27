@@ -84,7 +84,7 @@ const RegistroDePonto = () => {
         </motion.div>
 
         <section className={styles.activitySection}>
-          <h3 className={styles.sectionTitle}>Registros de Hoje</h3>
+          <h3 className={styles.sectionTitle}>Registro de Hoje</h3>
           <motion.div 
             className={styles.timeCard}
             initial={{ opacity: 0, y: 20 }}
@@ -101,19 +101,16 @@ const RegistroDePonto = () => {
                 <span className={styles.timeLabel}>Entrada</span>
                 <span className={styles.timeValue}>09:00</span>
               </div>
-              <span className={styles.separator}>|</span>
               
               <div className={styles.timeBlock}>
-                <span className={styles.timeLabel}>Saída Almoço</span>
+                <span className={styles.timeLabel}>Almoço</span>
                 <span className={styles.timeValue}>12:00</span>
               </div>
-              <span className={styles.separator}>|</span>
               
               <div className={styles.timeBlock}>
                 <span className={styles.timeLabel}>Retorno</span>
                 <span className={styles.timeValue}>13:00</span>
               </div>
-              <span className={styles.separator}>|</span>
               
               <div className={styles.timeBlock}>
                 <span className={styles.timeLabel}>Saída</span>
