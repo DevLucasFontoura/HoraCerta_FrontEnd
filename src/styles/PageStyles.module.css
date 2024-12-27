@@ -1,0 +1,50 @@
+.pageContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.pageHeader {
+    margin-bottom: 2rem;
+}
+
+.pageTitle {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+    color: #666;
+    font-size: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 0.5rem;
+    }
+
+    .pageHeader {
+        margin-bottom: 1.5rem;
+    }
+
+    .pageTitle {
+        font-size: 1.5rem;
+    }
+
+    .pageSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 6px;
+    }
+}

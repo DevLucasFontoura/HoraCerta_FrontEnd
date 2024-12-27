@@ -17,6 +17,8 @@ import Perguntas from '../pages/Configuracao/Telas/Perguntas/perguntas';
 import Politica from '../pages/Configuracao/Telas/Politica/politica';
 import Sobre from '../pages/Configuracao/Telas/Sobre/sobre';
 import Suporte from '../pages/Configuracao/Telas/Suporte/suporte';
+import RegistrarPonto from '../pages/RegistrarPonto/registrarPonto';
+import Relatorios from '../pages/Relatorios/relatorios';
 
 export const router = createBrowserRouter([
   {
@@ -90,6 +92,14 @@ export const router = createBrowserRouter([
   {
     path: '/configuracao/telas/suporte',
     element: <Suporte />,
+  },
+  {
+    path: '/registrarPonto',
+    element: <RegistrarPonto />,
+  },
+  {
+    path: '/relatorios',
+    element: <Relatorios />,
   },
   // Adicione outras rotas aqui
 ]);

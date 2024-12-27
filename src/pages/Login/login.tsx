@@ -15,7 +15,7 @@ const Login = () => {
     setLoading(true);
     
     setTimeout(() => {
-      navigate('/registroPonto');
+      navigate('/bemVindo');
     }, 500);
   };
 

@@ -45,26 +45,31 @@
 }
 
 .addButton {
-  background: #111111;
-  border: none;
-  width: 48px;
-  height: 48px;
+  background: #000;
   border-radius: 50%;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  border: none;
   cursor: pointer;
-  transition: transform 0.2s;
+  margin-top: -20px;
+  position: relative;
+  color: white;
 }
 
-.addButton:hover {
-  transform: scale(1.05);
+.addButton svg {
+  color: white;
 }
 
-.active {
-  color: #111111 !important;
-  font-weight: 500;
+.addButton.active {
+  background: #000;
+  color: white;
+}
+
+.addButton.active svg {
+  color: white;
 }
 
 @media (max-width: 768px) {
