@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FiEdit2, FiClock, FiCalendar } from 'react-icons/fi';
+import { IoStatsChartOutline } from 'react-icons/io5';
+import { BsArrowRightShort } from 'react-icons/bs';
 import styles from './relatorios.module.css';
 import BottomNav from '../../components/Menu/menu';
 
@@ -17,7 +20,41 @@ interface TimeRecordItemProps {
   record: TimeRecord;
 }
 
+const StatsCard = ({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }) => {
+  return (
+    <motion.div
+      className={styles.statsCard}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
+      <div className={styles.statsIcon}>{icon}</div>
+      <div className={styles.statsContent}>
+        <div className={styles.statsLabel}>{label}</div>
+        <div className={styles.statsValue}>{value}</div>
+      </div>
+    </motion.div>
+  );
+};
+
 const TimeRecordItem = ({ record }: TimeRecordItemProps) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedRecord, setEditedRecord] = useState(record);
+
+  const handleEdit = () => {
+    if (isEditing) {
+      // Aqui você implementaria a lógica para salvar as alterações
+      console.log('Salvando alterações:', editedRecord);
+    }
+    setIsEditing(!isEditing);
+  };
+
+  const handleTimeChange = (field: keyof TimeRecord, value: string) => {
+    setEditedRecord(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
   return (
     <motion.div 
       className={styles.recordCard}
@@ -30,23 +67,64 @@ const TimeRecordItem = ({ record }: TimeRecordItemProps) => {
       </div>
       <div className={styles.recordRow}>
         <span className={styles.recordLabel}>Entrada</span>
-        <span className={styles.recordValue}>{record.entry || '--:--'}</span>
+        {isEditing ? (
+          <input
+            type="time"
+            value={editedRecord.entry}
+            onChange={(e) => handleTimeChange('entry', e.target.value)}
+            className={styles.timeInput}
+          />
+        ) : (
+          <span className={styles.recordValue}>{record.entry || '--:--'}</span>
+        )}
       </div>
       <div className={styles.recordRow}>
         <span className={styles.recordLabel}>Saída Almoço</span>
-        <span className={styles.recordValue}>{record.lunchOut || '--:--'}</span>
+        {isEditing ? (
+          <input
+            type="time"
+            value={editedRecord.lunchOut}
+            onChange={(e) => handleTimeChange('lunchOut', e.target.value)}
+            className={styles.timeInput}
+          />
+        ) : (
+          <span className={styles.recordValue}>{record.lunchOut || '--:--'}</span>
+        )}
       </div>
       <div className={styles.recordRow}>
         <span className={styles.recordLabel}>Retorno Almoço</span>
-        <span className={styles.recordValue}>{record.lunchReturn || '--:--'}</span>
+        {isEditing ? (
+          <input
+            type="time"
+            value={editedRecord.lunchReturn}
+            onChange={(e) => handleTimeChange('lunchReturn', e.target.value)}
+            className={styles.timeInput}
+          />
+        ) : (
+          <span className={styles.recordValue}>{record.lunchReturn || '--:--'}</span>
+        )}
       </div>
       <div className={styles.recordRow}>
         <span className={styles.recordLabel}>Saída</span>
-        <span className={styles.recordValue}>{record.exit || '--:--'}</span>
+        {isEditing ? (
+          <input
+            type="time"
+            value={editedRecord.exit}
+            onChange={(e) => handleTimeChange('exit', e.target.value)}
+            className={styles.timeInput}
+          />
+        ) : (
+          <span className={styles.recordValue}>{record.exit || '--:--'}</span>
+        )}
       </div>
       <div className={`${styles.recordRow} ${styles.totalRow}`}>
         <span className={styles.recordLabel}>Total</span>
         <span className={styles.recordValue}>{record.total || '--:--'}</span>
+      </div>
+      <div className={styles.dangerZone}>
+        <button onClick={handleEdit} className={styles.editButton}>
+          {isEditing ? 'Salvar' : 'Editar'}
+        </button>
       </div>
     </motion.div>
   );
@@ -82,6 +160,29 @@ export default function ReportsScreen() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
+        <div className={styles.statsContainer}>
+          <StatsCard 
+            label="Total de Horas" 
+            value="160h" 
+            icon={<FiClock size={24} />}
+          />
+          <StatsCard 
+            label="Média Diária" 
+            value="8h" 
+            icon={<IoStatsChartOutline size={24} />}
+          />
+          <StatsCard 
+            label="Dias Trabalhados" 
+            value="20" 
+            icon={<FiCalendar size={24} />}
+          />
+          <StatsCard 
+            label="Relatório Completo" 
+            value="Ver mais >" 
+            icon={<BsArrowRightShort size={24} />}
+          />
+        </div>
+
         <div className={styles.listContent}>
           {mockTimeRecords.length > 0 ? (
             mockTimeRecords.map((record) => (

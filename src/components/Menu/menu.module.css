@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   background: white;
-  display: none; /* Inicialmente oculto */
+  display: none;
   justify-content: space-around;
   padding: 0.75rem 1rem;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
@@ -36,12 +36,59 @@
   text-decoration: none;
   color: #666666;
   gap: 0.25rem;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 0.5rem;
+}
+
+/* Estilo para link ativo */
+.mobileNav a.active,
+.desktopNav a.active {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Indicador visual para link ativo */
+.mobileNav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.desktopNav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
 }
 
 .mobileNav span,
 .desktopNav span {
   font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+/* Estilo para texto do link ativo */
+.mobileNav a.active span,
+.desktopNav a.active span {
+  color: #000;
+}
+
+/* Estilo para ícone do link ativo */
+.mobileNav a.active svg,
+.desktopNav a.active svg {
+  color: #000;
 }
 
 .addButton {
@@ -57,6 +104,7 @@
   margin-top: -20px;
   position: relative;
   color: white;
+  transition: all 0.2s ease;
 }
 
 .addButton svg {
@@ -65,19 +113,16 @@
 
 .addButton.active {
   background: #000;
-  color: white;
-}
-
-.addButton.active svg {
-  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .mobileNav {
-    display: flex; /* Mostra na versão mobile */
+    display: flex;
   }
   
   .desktopNav {
-    display: none; /* Esconde na versão mobile */
+    display: none;
   }
 } 
