@@ -24,7 +24,7 @@ const Precos = () => {
           <Link className={styles.navLink} to="/recursos">Recursos</Link>
           <Link className={styles.navLink} to="/comoFunciona">Como Funciona</Link>
           <Link className={styles.navLink} to="/">Home</Link>
-          <Link className={styles.primaryButton} to="/register">Criar conta gratuita →</Link>
+          <Link className={styles.primaryButton} to="/registro">Criar conta gratuita →</Link>
         </div>
 
         {/* Menu Mobile */}
@@ -73,7 +73,7 @@ const Precos = () => {
                   <Link className={styles.mobileNavLink} to="/" onClick={toggleMenu}>
                     Home
                   </Link>
-                  <Link className={styles.mobilePrimaryButton} to="/register" onClick={toggleMenu}>
+                  <Link className={styles.mobilePrimaryButton} to="/registro" onClick={toggleMenu}>
                     Criar conta gratuita →
                   </Link>
                 </motion.div>

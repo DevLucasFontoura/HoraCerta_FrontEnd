@@ -54,12 +54,29 @@ const FeaturesPage = () => {
                 exit={{ x: '100%' }}
                 transition={{ type: 'tween', duration: 0.3 }}
               >
-                <Link className={styles.mobileNavLink} to="/" onClick={toggleMenu}>
-                  Voltar ao início
-                </Link>
-                <Link className={styles.mobilePrimaryButton} to="/register" onClick={toggleMenu}>
-                  Criar conta gratuita →
-                </Link>
+                <motion.div
+                  initial="closed"
+                  animate="open"
+                  variants={{
+                    open: {
+                      transition: { staggerChildren: 0.05 }
+                    },
+                    closed: {}
+                  }}
+                >
+                  <Link className={styles.mobileNavLink} to="/comoFunciona" onClick={toggleMenu}>
+                    Como funciona
+                  </Link>
+                  <Link className={styles.mobileNavLink} to="/precos" onClick={toggleMenu}>
+                    Preços
+                  </Link>
+                  <Link className={styles.mobileNavLink} to="/" onClick={toggleMenu}>
+                    Home
+                  </Link>
+                  <Link className={styles.mobilePrimaryButton} to="/registro" onClick={toggleMenu}>
+                    Criar conta gratuita →
+                  </Link>
+                </motion.div>
               </motion.div>
             </>
           )}
