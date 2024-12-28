@@ -212,3 +212,82 @@
     border: 6px solid transparent;
     border-top-color: #333;
 }
+
+/* Menu Mobile */
+.mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #111111;
+    padding: 0.5rem;
+}
+
+.mobileMenuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    padding: 2rem;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileNavLink {
+    display: block;
+    color: #666666;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eaeaea;
+    transition: color 0.2s ease;
+}
+
+.mobileNavLink:hover {
+    color: #111111;
+}
+
+.mobilePrimaryButton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #111111;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.mobilePrimaryButton:hover {
+    background-color: #000000;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .mobileMenuButton {
+        display: block;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    /* ... outros ajustes mobile existentes ... */
+}
