@@ -21,8 +21,8 @@ const Precos = () => {
         
         {/* Menu Desktop */}
         <div className={styles.navLinks}>
+          <Link className={styles.navLink} to="/comoFunciona">Como funciona</Link>
           <Link className={styles.navLink} to="/recursos">Recursos</Link>
-          <Link className={styles.navLink} to="/comoFunciona">Como Funciona</Link>
           <Link className={styles.navLink} to="/">Home</Link>
           <Link className={styles.primaryButton} to="/registro">Criar conta gratuita →</Link>
         </div>
@@ -64,11 +64,11 @@ const Precos = () => {
                     closed: {}
                   }}
                 >
-                  <Link className={styles.mobileNavLink} to="/recursos" onClick={toggleMenu}>
-                    Recursos
-                  </Link>
                   <Link className={styles.mobileNavLink} to="/comoFunciona" onClick={toggleMenu}>
                     Como Funciona
+                  </Link>
+                  <Link className={styles.mobileNavLink} to="/recursos" onClick={toggleMenu}>
+                    Recursos
                   </Link>
                   <Link className={styles.mobileNavLink} to="/" onClick={toggleMenu}>
                     Home
@@ -103,7 +103,6 @@ const Precos = () => {
                 <div className={styles.tooltip}>
                   • Permite apenas editar o horário de entrada/saída<br/>
                   • Edição individual (um registro por vez)<br/>
-                  • Sem histórico de alterações
                 </div>
               </span>
             </li>
@@ -125,7 +124,6 @@ const Precos = () => {
                 <div className={styles.tooltip}>
                   • Edição de horário de entrada/saída<br/>
                   • Adicionar justificativas para alterações<br/>
-                  • Histórico de alterações<br/>
                   • Possibilidade de adicionar anexos<br/>
                   • Validação por gestor
                 </div>
@@ -136,29 +134,6 @@ const Precos = () => {
             </li>
             <li className={styles.planFeature}>
               <AiOutlineCheckCircle /> Exportação Excel/PDF
-            </li>
-          </ul>
-          <Link className={styles.primaryButton} to="/register">Começar agora</Link>
-        </div>
-
-        <div className={`${styles.pricingCard} ${styles.highlighted}`}>
-          <h3 className={styles.planName}>Profissional</h3>
-          <div className={styles.planPrice}>R$ 19,99<span>/mês</span></div>
-          <ul className={styles.planFeatures}>
-            <li className={styles.planFeature}>
-              <AiOutlineCheckCircle /> Registros ilimitados
-            </li>
-            <li className={styles.planFeature}>
-              <AiOutlineCheckCircle /> Edição em lote de registros
-            </li>
-            <li className={styles.planFeature}>
-              <AiOutlineCheckCircle /> Histórico completo
-            </li>
-            <li className={styles.planFeature}>
-              <AiOutlineCheckCircle /> Relatórios personalizados
-            </li>
-            <li className={styles.planFeature}>
-              <AiOutlineCheckCircle /> Suporte prioritário
             </li>
           </ul>
           <Link className={styles.primaryButton} to="/register">Começar agora</Link>

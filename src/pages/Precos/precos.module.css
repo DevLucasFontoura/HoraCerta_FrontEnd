@@ -1,19 +1,15 @@
 .container {
     min-height: 100vh;
     background-color: #ffffff;
-    overflow-x: hidden;
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    width: 100%;
-    background: white;
+    padding: 1.5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -29,6 +25,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    white-space: nowrap;
 }
 
 .navLink {
@@ -36,6 +33,7 @@
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s ease;
+    white-space: nowrap;
 }
 
 .navLink:hover {
@@ -44,30 +42,60 @@
 
 .header {
     text-align: center;
-    padding: 2rem 1rem;
-    width: 100%;
+    padding: 4rem 5% 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .headerTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    padding: 0 1rem;
+    white-space: nowrap;
 }
 
 .headerSubtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #666666;
-    padding: 0 1rem;
 }
 
 .pricingGrid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
-    width: 100%;
-    padding: 0 1rem;
-    margin: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+@media (min-width: 768px) {
+    .pricingGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .pricingCard {
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+        text-align: left;
+    }
+
+    .headerTitle {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .headerSubtitle {
+        font-size: 1rem;
+    }
 }
 
 .pricingCard {
@@ -79,6 +107,9 @@
     margin: 0;
     width: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pricingCard.highlighted {
@@ -107,6 +138,7 @@
 .planFeatures {
     list-style: none;
     margin-bottom: 2rem;
+    flex-grow: 1;
 }
 
 .planFeature {
@@ -124,7 +156,7 @@
 }
 
 .primaryButton {
-    display: block;
+    display: inline-block;
     padding: 0.75rem 1.5rem;
     background-color: #111111;
     color: white;
@@ -132,30 +164,29 @@
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
-    width: 100%;
     text-align: center;
-    margin: 0;
+    transition: all 0.2s ease;
+    margin-top: auto;
 }
 
 .primaryButton:hover {
     background-color: #000000;
+    transform: translateY(-1px);
 }
 
 .secondaryButton {
-    display: block;
-    padding: 0.875rem 1.5rem;
-    background-color: #ffffff;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
     color: #111111;
     text-decoration: none;
-    border-radius: 999px;
-    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #111111;
+    font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid #eaeaea;
-    transition: all 0.2s ease;
-    width: 100%;
     text-align: center;
-    margin: 0;
+    transition: all 0.2s ease;
+    margin-top: auto;
 }
 
 .secondaryButton:hover {
