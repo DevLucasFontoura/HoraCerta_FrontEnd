@@ -57,6 +57,7 @@
 .headerSubtitle {
     font-size: 1.25rem;
     color: #666666;
+    line-height: 1.4;
 }
 
 .pricingGrid {
@@ -79,22 +80,37 @@
 }
 
 @media (max-width: 768px) {
-    .pricingGrid {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 1rem;
     }
 
     .header {
         padding: 2rem 1rem;
         text-align: left;
+        max-width: 100%;
     }
 
-    .headerTitle {
-        font-size: 2rem;
-        line-height: 1.2;
+    .pricingGrid {
+        padding: 0;
+        margin: 0 0 2rem 0;
+        width: 100%;
     }
 
-    .headerSubtitle {
-        font-size: 1rem;
+    .pricingCard {
+        margin: 0 0 1rem 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .pricingCard:last-child {
+        margin-bottom: 2rem;
     }
 }
 
@@ -345,11 +361,27 @@
     }
 
     .pricingGrid {
-        padding: 0 1rem;
+        padding: 0 1rem 2rem;
+        margin-bottom: 2rem;
     }
 
     .pricingCard {
-        margin: 0;
+        margin: 0 0 1rem 0;
         width: 100%;
+    }
+
+    .pricingCard:last-child {
+        margin-bottom: 2rem;
+    }
+
+    .headerTitle {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .headerSubtitle {
+        font-size: 1.1rem;
+        line-height: 1.4;
     }
 }
