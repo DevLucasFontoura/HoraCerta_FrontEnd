@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './recursos.module.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { CONSTANTES } from '../../common/constantes';
 
 const FeaturesPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,10 +22,10 @@ const FeaturesPage = () => {
         
         {/* Menu Desktop */}
         <div className={styles.navLinks}>
-          <Link className={styles.navLink} to="/comoFunciona">Como funciona</Link>
-          <Link className={styles.navLink} to="/precos">Preços</Link>
-          <Link className={styles.navLink} to="/">Home</Link>
-          <Link className={styles.primaryButton} to="/register">Criar conta gratuita →</Link>
+          <Link className={styles.navLink} to={CONSTANTES.COMO_FUNCIONA}>{CONSTANTES.TITULO_MENU_COMO_FUNCIONA}</Link>
+          <Link className={styles.navLink} to={CONSTANTES.PRECOS}>{CONSTANTES.TITULO_MENU_PRECOS}</Link>
+          <Link className={styles.navLink} to={CONSTANTES.HOME}>{CONSTANTES.TITULO_HOME}</Link>
+          <Link className={styles.primaryButton} to={CONSTANTES.REGISTRO}>{CONSTANTES.BOTAO_COMECAR}</Link>
         </div>
 
         {/* Menu Mobile */}
@@ -64,18 +65,10 @@ const FeaturesPage = () => {
                     closed: {}
                   }}
                 >
-                  <Link className={styles.mobileNavLink} to="/comoFunciona" onClick={toggleMenu}>
-                    Como funciona
-                  </Link>
-                  <Link className={styles.mobileNavLink} to="/precos" onClick={toggleMenu}>
-                    Preços
-                  </Link>
-                  <Link className={styles.mobileNavLink} to="/" onClick={toggleMenu}>
-                    Home
-                  </Link>
-                  <Link className={styles.mobilePrimaryButton} to="/registro" onClick={toggleMenu}>
-                    Criar conta gratuita →
-                  </Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.COMO_FUNCIONA} onClick={toggleMenu}>{CONSTANTES.TITULO_MENU_COMO_FUNCIONA}</Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.PRECOS} onClick={toggleMenu}>{CONSTANTES.TITULO_MENU_PRECOS}</Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.HOME} onClick={toggleMenu}>{CONSTANTES.HOME}</Link>
+                  <Link className={styles.mobilePrimaryButton} to={CONSTANTES.REGISTRO} onClick={toggleMenu}>{CONSTANTES.BOTAO_COMECAR}</Link>
                 </motion.div>
               </motion.div>
             </>
@@ -84,57 +77,51 @@ const FeaturesPage = () => {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.headerTitle}>Recursos Completos</h1>
-        <p className={styles.headerSubtitle}>Conheça todas as funcionalidades do HoraCerta</p>
+        <h1 className={styles.headerTitle}>{CONSTANTES.TITULO_RECURSOS_COMPLETOS}</h1>
+        <p className={styles.headerSubtitle}>{CONSTANTES.SUBTITULO_RECURSOS_COMPLETOS}</p>
       </header>
 
       <section className={styles.featuresSection}>
         <div className={styles.featureCategory}>
-          <h2 className={styles.categoryTitle}>Registro de Ponto</h2>
+          <h2 className={styles.categoryTitle}>{CONSTANTES.CARD_REGISTRO_DE_PONTO_TITULO}</h2>
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineClockCircle size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineClockCircle size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Registro Simplificado</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_REGISTRO_DE_PONTO_01_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Interface intuitiva e fácil de usar</li>
-                    <li>Registro rápido de entrada e saída</li>
-                    <li>Confirmação instantânea</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_01_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_01_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_01_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineMobile size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineMobile size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Acesso Multiplataforma</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_REGISTRO_DE_PONTO_02_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Acesse de qualquer dispositivo</li>
-                    <li>Compatível com celular e tablet</li>
-                    <li>Sistema 100% online</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_02_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_02_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_02_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineNotification size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineNotification size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Notificações</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_REGISTRO_DE_PONTO_03_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Lembretes de registro</li>
-                    <li>Alertas de inconsistências</li>
-                    <li>Confirmações por email</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_03_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_03_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_REGISTRO_DE_PONTO_03_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
@@ -143,51 +130,45 @@ const FeaturesPage = () => {
         </div>
 
         <div className={styles.featureCategory}>
-          <h2 className={styles.categoryTitle}>Gestão e Edição</h2>
+          <h2 className={styles.categoryTitle}>{CONSTANTES.CARD_GESTÃO_E_EDICAO_TITULO}</h2>
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineEdit size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineEdit size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Edição Flexível</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_GESTÃO_E_EDICAO_01_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Ajuste de horários</li>
-                    <li>Adição de justificativas</li>
-                    <li>Anexo de documentos</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_01_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_01_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_01_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineTeam size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineTeam size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Gestão Simplificada</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_GESTÃO_E_EDICAO_02_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Visão geral dos registros</li>
-                    <li>Organização por períodos</li>
-                    <li>Filtros avançados</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_02_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_02_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_02_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineCloud size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineCloud size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Backup Automático</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_GESTÃO_E_EDICAO_03_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Dados sempre seguros</li>
-                    <li>Histórico completo</li>
-                    <li>Recuperação facilitada</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_03_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_03_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_GESTÃO_E_EDICAO_03_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
@@ -196,51 +177,45 @@ const FeaturesPage = () => {
         </div>
 
         <div className={styles.featureCategory}>
-          <h2 className={styles.categoryTitle}>Relatórios e Exportação</h2>
+          <h2 className={styles.categoryTitle}>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_TITULO}</h2>
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineFileText size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineFileText size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Relatórios Detalhados</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_01_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Relatórios personalizados</li>
-                    <li>Múltiplos formatos</li>
-                    <li>Exportação facilitada</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_01_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_01_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_01_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineBarChart size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineBarChart size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Análise de Dados</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_02_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Visualização de tendências</li>
-                    <li>Estatísticas detalhadas</li>
-                    <li>Insights importantes</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_02_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_02_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_02_ITEM_03}</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <AiOutlineSafety size={28} />
-              </div>
+              <div className={styles.featureIcon}><AiOutlineSafety size={28} /></div>
               <div>
-                <h3 className={styles.featureTitle}>Segurança</h3>
+                <h3 className={styles.featureTitle}>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_03_TITULO}</h3>
                 <div className={styles.featureDescription}>
                   <ul>
-                    <li>Dados criptografados</li>
-                    <li>Backup regular</li>
-                    <li>Conformidade com LGPD</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_03_ITEM_01}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_03_ITEM_02}</li>
+                    <li>{CONSTANTES.CARD_RELATÓRIOS_E_EXPORTAÇÃO_03_ITEM_03}</li>
                   </ul>
                 </div>
               </div>

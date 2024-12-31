@@ -1,6 +1,7 @@
 import { AiOutlineClockCircle, AiOutlineEdit, AiOutlineFileText, AiOutlineMobile, AiOutlineSafety, AiOutlineTeam, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import AnimatedClock from '../../components/AnimatedClock/AnimatedClock';
 import { motion, AnimatePresence } from 'framer-motion';
+import { CONSTANTES } from '../../common/constantes';
 import { Link } from 'react-router-dom';
 import styles from './home.module.css';
 import { useState } from 'react';
@@ -18,15 +19,15 @@ const LandingPage = () => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <AiOutlineClockCircle size={24} />
-          HoraCerta
+          {CONSTANTES.TITULO_SITE}
         </div>
         
         {/* Menu Desktop */}
         <div className={styles.navLinks}>
-          <Link className={styles.navLink} to="/recursos">Recursos</Link>
-          <Link className={styles.navLink} to="/precos">Preços</Link>
-          <Link className={styles.navLink} to="/comoFunciona">Como funciona</Link>
-          <Link className={styles.primaryButton} to="/registro">Criar conta gratuita →</Link>
+          <Link className={styles.navLink} to={CONSTANTES.RECURSOS}>{CONSTANTES.TITULO_MENU_RECURSOS}</Link>
+          <Link className={styles.navLink} to={CONSTANTES.PRECOS}>{CONSTANTES.TITULO_MENU_PRECOS}</Link>
+          <Link className={styles.navLink} to={CONSTANTES.COMO_FUNCIONA}>{CONSTANTES.TITULO_MENU_COMO_FUNCIONA}</Link>
+          <Link className={styles.primaryButton} to={CONSTANTES.REGISTRO}>{CONSTANTES.BOTAO_COMECAR}</Link>
         </div>
 
         {/* Menu Mobile */}
@@ -66,18 +67,10 @@ const LandingPage = () => {
                     closed: {}
                   }}
                 >
-                  <Link className={styles.mobileNavLink} to="/recursos" onClick={toggleMenu}>
-                    Recursos
-                  </Link>
-                  <Link className={styles.mobileNavLink} to="/precos" onClick={toggleMenu}>
-                    Preços
-                  </Link>
-                  <Link className={styles.mobileNavLink} to="/comoFunciona" onClick={toggleMenu}>
-                    Como funciona
-                  </Link>
-                  <Link className={styles.mobilePrimaryButton} to="/registro" onClick={toggleMenu}>
-                    Criar conta gratuita →
-                  </Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.RECURSOS} onClick={toggleMenu}>{CONSTANTES.TITULO_MENU_RECURSOS}</Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.PRECOS} onClick={toggleMenu}>{CONSTANTES.TITULO_MENU_PRECOS}</Link>
+                  <Link className={styles.mobileNavLink} to={CONSTANTES.COMO_FUNCIONA} onClick={toggleMenu}>{CONSTANTES.TITULO_MENU_COMO_FUNCIONA}</Link>
+                  <Link className={styles.mobilePrimaryButton} to={CONSTANTES.REGISTRO} onClick={toggleMenu}>{CONSTANTES.BOTAO_COMECAR}</Link>
                 </motion.div>
               </motion.div>
             </>
@@ -93,88 +86,65 @@ const LandingPage = () => {
         >
           <AnimatedClock />
           <div className={styles.gradient} />
-          <h1 className={styles.heroTitle}>
-            Controle de ponto que seus colaboradores vão adorar usar
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Uma ferramenta simples e intuitiva para registro e gestão de ponto. 
-            Sem complicações, sem burocracias.
-          </p>
+          <h1 className={styles.heroTitle}>{CONSTANTES.TITULO_PRINCIPAL}</h1>
+          <p className={styles.heroSubtitle}>{CONSTANTES.SUBTITULO_PRINCIPAL}</p>
           <div className={styles.buttonGroup}>
-            <Link className={styles.primaryButton} to="/registro">
-              Começar gratuitamente →
-            </Link>
-            <Link className={styles.secondaryButton} to="/login">
-              Já tem uma conta? Faça login
-            </Link>
+            <Link className={styles.primaryButton} to={CONSTANTES.REGISTRO}>{CONSTANTES.BOTAO_COMECAR}</Link>
+            <Link className={styles.secondaryButton} to={CONSTANTES.LOGIN}>{CONSTANTES.BOTAO_LOGIN}</Link>
           </div>
         </motion.div>
       </div>
 
       <section className={styles.features} id="recursos">
-        <h2 className={styles.sectionTitle}>Recursos que facilitam sua gestão</h2>
-        <p className={styles.sectionSubtitle}>
-          Tudo que você precisa para gerenciar o ponto dos seus terceirizados
-        </p>
+        <h2 className={styles.sectionTitle}>{CONSTANTES.TITULO_RECURSOS}</h2>
+        <p className={styles.sectionSubtitle}>{CONSTANTES.SUBTITULO_RECURSOS}</p>
         
         <div className={styles.featureGrid}>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineClockCircle size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineClockCircle size={28} /></div>
             <div>
-              <h3>Registro Simplificado</h3>
-              <p>Registre o ponto de forma rápida e intuitiva, sem complicações ou burocracias.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_01_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_01_SUBTITULO}</p>
             </div>
           </div>
 
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineEdit size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineEdit size={28} /></div>
             <div>
-              <h3>Edição Flexível</h3>
-              <p>Faça ajustes nos registros quando necessário, com histórico completo de alterações.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_02_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_02_SUBTITULO}</p>
             </div>
           </div>
 
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineFileText size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineFileText size={28} /></div>
             <div>
-              <h3>Relatórios Detalhados</h3>
-              <p>Gere relatórios personalizados e exporte em PDF ou Excel.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_03_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_03_SUBTITULO}</p>
             </div>
           </div>
 
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineMobile size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineMobile size={28} /></div>
             <div>
-              <h3>Acesso de Qualquer Lugar</h3>
-              <p>Sistema 100% online, acesse de qualquer dispositivo a qualquer momento.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_04_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_04_SUBTITULO}</p>
             </div>
           </div>
 
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineSafety size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineSafety size={28} /></div>
             <div>
-              <h3>Dados Seguros</h3>
-              <p>Seus dados estão protegidos e podem ser exportados quando precisar.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_05_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_05_SUBTITULO}</p>
             </div>
           </div>
 
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>
-              <AiOutlineTeam size={28} />
-            </div>
+            <div className={styles.featureIcon}><AiOutlineTeam size={28} /></div>
             <div>
-              <h3>Gestão Simplificada</h3>
-              <p>Gerencie todos os registros em um só lugar de forma organizada.</p>
+              <h3>{CONSTANTES.CARD_RECURSOS_06_TITULO}</h3>
+              <p>{CONSTANTES.CARD_RECURSOS_06_SUBTITULO}</p>
             </div>
           </div>
         </div>
@@ -183,14 +153,11 @@ const LandingPage = () => {
       <section className={styles.enterpriseSection}>
         <div className={styles.enterpriseContent}>
           <div>
-            <h2 className={styles.sectionTitle}>HoraCerta para Empresas</h2>
-            <p className={styles.sectionSubtitle}>
-              Soluções personalizadas para grandes empresas. 
-              Integração com sistemas existentes, suporte dedicado e muito mais.
-            </p>
-            <span className={styles.comingSoonBadge}>Em breve</span>
+            <h2 className={styles.sectionTitle}>{CONSTANTES.TITULO_EMPRESA}</h2>
+            <p className={styles.sectionSubtitle}>{CONSTANTES.SUBTITULO_EMPRESA}</p>
+            <span className={styles.comingSoonBadge}>{CONSTANTES.COMING_SOON}</span>
           </div>
-          <div className={styles.enterpriseImage}>🏢</div>
+          <div className={styles.enterpriseImage}>{CONSTANTES.ICONE_EMPRESA}</div>
         </div>
       </section>
     </div>
